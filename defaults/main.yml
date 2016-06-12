@@ -1,0 +1,6 @@
+# -*- yaml -*-
+
+php7_fix_pathinfo: 1
+php7_memory_limit: 128M
+php7_post_max_size: 40M
+php7_upload_max_filesize: 20M

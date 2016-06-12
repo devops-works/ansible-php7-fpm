@@ -1,0 +1,4 @@
+- name:  Restart php7-fpm
+  service: name=php7-fpm state=restarted
+  notify:
+    - Restart nginx

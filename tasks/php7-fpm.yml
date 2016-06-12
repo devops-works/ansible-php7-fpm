@@ -1,0 +1,40 @@
+- name: Installs php7-fpm
+  apt: pkg={{ item }} state=latest
+  notify:
+    - Restart nginx
+  with_items:
+    - php7-fpm
+    - php-apcu
+    - php7-mcrypt
+    - php7-gd
+    - php7-curl
+    - php-pear
+    - php7-mysql
+
+- name: Adds php.ini
+  template: 
+    src: "../templates/php.ini.j2"
+    dest: /etc/php/7.0/fpm/php.ini
+    backup: yes
+  notify:
+    - Restart php7-fpm
+    - Restart nginx
+
+- name: Adds nginx buffer tuning
+  template:
+    src: "../templates/fastcgi_buffers.conf.j2"
+    dest: /etc/nginx/conf.d/fastcgi_buffers.conf
+  notify:
+    - Restart php7-fpm
+    - Restart nginx
+
+- name: Adds pear channels
+  shell: pear channel-discover {{ item }}
+  with_items: pear.channels
+  when: pear is defined
+
+- name: Adds pear packages
+  shell: pear install {{ item }}
+  with_items: pear.packages
+  when: pear is defined
+

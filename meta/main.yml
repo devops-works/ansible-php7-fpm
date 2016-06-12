@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Michel Blanc
+  description: php7-fpm role
+  company: ACME Corp
+  license: MIT
+  min_ansible_version: 1.8
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+      - all
+  categories:
+    - development
+
+dependencies:
+  - role: ansible-nginx
+
