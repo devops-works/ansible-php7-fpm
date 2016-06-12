@@ -3,13 +3,13 @@
   notify:
     - Restart nginx
   with_items:
-    - php7-fpm
+    - php7.0-fpm
     - php-apcu
-    - php7-mcrypt
-    - php7-gd
-    - php7-curl
+    - php7.0-mcrypt
+    - php7.0-gd
+    - php7.0-curl
     - php-pear
-    - php7-mysql
+    - php7.0-mysql
 
 - name: Adds php.ini
   template: 
