@@ -474,7 +474,7 @@ max_input_time = 60
 
 ; Maximum amount of memory a script may consume (128MB)
 ; http://php.net/memory-limit
-memory_limit = {{ php5_memory_limit }}
+memory_limit = {{ php7_memory_limit }}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Error handling and logging ;
@@ -749,7 +749,7 @@ auto_globals_jit = On
 
 ; Maximum size of POST data that PHP will accept.
 ; http://php.net/post-max-size
-post_max_size = {{ php5_post_max_size }}
+post_max_size = {{ php7_post_max_size }}
 
 ; Magic quotes are a preprocessing feature of PHP where PHP will attempt to
 ; escape any character sequences in GET, POST, COOKIE and ENV data which might
@@ -863,7 +863,7 @@ enable_dl = Off
 ; of zero causes PHP to behave as before.  Default is 1.  You should fix your scripts
 ; to use SCRIPT_FILENAME rather than PATH_TRANSLATED.
 ; http://php.net/cgi.fix-pathinfo
-cgi.fix_pathinfo={{ php5_fix_pathinfo }}
+cgi.fix_pathinfo={{ php7_fix_pathinfo }}
 
 ; FastCGI under IIS (on WINNT based OS) supports the ability to impersonate
 ; security tokens of the calling client.  This allows IIS to define the
@@ -900,7 +900,7 @@ file_uploads = On
 
 ; Maximum allowed size for uploaded files.
 ; http://php.net/upload-max-filesize
-upload_max_filesize = {{ php5_upload_max_filesize }}
+upload_max_filesize = {{ php7_upload_max_filesize }}
 
 ; Maximum number of files that can be uploaded via a single request
 max_file_uploads = 20
