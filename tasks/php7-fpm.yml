@@ -1,7 +1,7 @@
 - name: Installs php7-fpm
   apt: pkg={{ item }} state=latest
   notify:
-    - Restart nginx
+    - Restart php7-fpm
   with_items:
     - php7.0-fpm
     - php-apcu
