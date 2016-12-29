@@ -1742,7 +1742,7 @@ mssql.secure_connection = Off
 
 ; http input encoding.
 ; http://php.net/mbstring.http-input
-;mbstring.http_input = auto
+mbstring.http_input = {{ php7_mbstring_http_input }}
 
 ; http output encoding. mb_output_handler must be
 ; registered as output buffer to function
