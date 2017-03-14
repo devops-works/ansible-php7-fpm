@@ -1,5 +1,8 @@
 - name: Installs php7-fpm
-  apt: pkg={{ item }} state=latest
+  apt: 
+    pkg: "{{ item }}"
+    state: latest
+    update_cache: yes
   notify:
     - Restart php7-fpm
   with_items:
