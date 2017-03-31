@@ -1,4 +1,5 @@
 - name:  Restart php7-fpm
-  service: name=php7.0-fpm state=restarted
-  notify:
-    - Restart nginx
+  service: 
+    name: php{{ php7_version }}-fpm
+    state: restarted
+

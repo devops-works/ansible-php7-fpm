@@ -1,7 +1,7 @@
-php7-fpm Ansible playbook
-=========================
+php7-fpm Ansible role
+=====================
 
-This playbook will install php7-fpm in Xenial (16.04)
+This role will install php7-fpm in Xenial (16.04)
 
 Requirements
 ------------

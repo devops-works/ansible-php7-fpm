@@ -1,1 +1,2 @@
-- include: php7-fpm.yml tags=php7-fpm
+- include: php7-fpm.yml
+  tags: ["php7-fpm"]
