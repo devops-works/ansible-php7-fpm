@@ -4,7 +4,8 @@
     update_cache: yes
 
 - name: Show selected php7_version
-  debug: msg="Deploying php7 version {{ php7_version }}"
+  debug: 
+    msg: "Deploying php7 version {{ php7_version }}"
 
 - name: Installs php7-fpm
   apt:
@@ -22,6 +23,7 @@
     - php{{ php7_version }}-curl
     - php-pear
     - php{{ php7_version }}-mysql
+    - "[{{ php7_module_debs }}]"
 
 - name: Adds php.ini
   template:

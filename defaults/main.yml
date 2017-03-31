@@ -1,5 +1,7 @@
 # -*- yaml -*-
 
+php7_module_debs: []
+
 php7_fix_pathinfo: 1
 php7_max_execution_time: 30
 php7_mbstring_http_input: "auto"
