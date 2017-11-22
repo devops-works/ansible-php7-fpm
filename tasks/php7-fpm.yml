@@ -15,14 +15,22 @@
   notify:
     - Restart php7-fpm
   with_items:
-    - composer
     - php{{ php7_version }}-fpm
+    - composer
     - php-apcu
-    - php{{ php7_version }}-mcrypt
-    - php{{ php7_version }}-gd
-    - php{{ php7_version }}-curl
     - php-pear
+    - php{{ php7_version }}-bz2
+    - php{{ php7_version }}-cli
+    - php{{ php7_version }}-curl
+    - php{{ php7_version }}-gd
+    - php{{ php7_version }}-intl
+    - php{{ php7_version }}-mbstring
+    - php{{ php7_version }}-mcrypt
     - php{{ php7_version }}-mysql
+    - php{{ php7_version }}-opcache
+    - php{{ php7_version }}-readline
+    - php{{ php7_version }}-xml
+    - php{{ php7_version }}-zip
     - "[{{ php7_module_debs }}]"
 
 - name: Adds php.ini
