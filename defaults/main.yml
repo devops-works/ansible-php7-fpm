@@ -8,4 +8,4 @@ php7_mbstring_http_input: "auto"
 php7_memory_limit: 128M
 php7_post_max_size: 40M
 php7_upload_max_filesize: 20M
-php7_version: 7.0
+php7_version: 7.2
