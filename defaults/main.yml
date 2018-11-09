@@ -9,3 +9,23 @@ php7_memory_limit: 128M
 php7_post_max_size: 40M
 php7_upload_max_filesize: 20M
 php7_version: 7.2
+php7_default_packages:
+  - php{{ php7_version }}-fpm
+  - composer
+  - php-apcu
+  - php-pear
+  - php{{ php7_version }}-bz2
+  - php{{ php7_version }}-cli
+  - php{{ php7_version }}-curl
+  - php{{ php7_version }}-gd
+  - php{{ php7_version }}-intl
+  - php{{ php7_version }}-mbstring
+  - php{{ php7_version }}-mysql
+  - php{{ php7_version }}-opcache
+  - php{{ php7_version }}-readline
+  - php{{ php7_version }}-xml
+  - php{{ php7_version }}-zip
+
+php7_all_packages:
+  - "{{ php7_default_packages }}"
+  - "{{ php7_module_debs }}"
