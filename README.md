@@ -11,7 +11,6 @@ Required packages (installed automatically) :
   - php7-fpm
   - php7.0-opcache
   - php-apcu
-  - php7.0-mcrypt
   - php7.0-gd
   - php7.0-curl
   - php-pear
