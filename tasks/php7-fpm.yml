@@ -9,7 +9,15 @@
 
 - name: Installs php7-fpm
   apt:
-    pkg: "{{ php7_all_packages }}"
+    pkg: "{{ php7_default_packages }}"
+    state: latest
+    update_cache: yes
+  notify:
+    - Restart php7-fpm
+
+- name: Installs php7-fpm module debs
+  apt:
+    pkg: "{{ php7_module_debs }}"
     state: latest
     update_cache: yes
   notify:

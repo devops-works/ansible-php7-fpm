@@ -25,7 +25,3 @@ php7_default_packages:
   - php{{ php7_version }}-readline
   - php{{ php7_version }}-xml
   - php{{ php7_version }}-zip
-
-php7_all_packages:
-  - "{{ php7_default_packages }}"
-  - "{{ php7_module_debs }}"
