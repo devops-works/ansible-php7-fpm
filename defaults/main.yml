@@ -11,7 +11,6 @@ php7_upload_max_filesize: 20M
 php7_version: 7.2
 php7_default_packages:
   - php{{ php7_version }}-fpm
-  - composer
   - php-apcu
   - php-pear
   - php{{ php7_version }}-bz2
