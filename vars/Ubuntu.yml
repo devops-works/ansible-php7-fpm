@@ -1,1 +1,17 @@
 php7_version: 7.2
+
+php7_default_packages:
+  - php{{ php7_version }}-fpm
+  - php-apcu
+  - php-pear
+  - php{{ php7_version }}-bz2
+  - php{{ php7_version }}-cli
+  - php{{ php7_version }}-curl
+  - php{{ php7_version }}-gd
+  - php{{ php7_version }}-intl
+  - php{{ php7_version }}-mbstring
+  - php{{ php7_version }}-mysql
+  - php{{ php7_version }}-opcache
+  - php{{ php7_version }}-readline
+  - php{{ php7_version }}-xml
+  - php{{ php7_version }}-zip
