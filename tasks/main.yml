@@ -1,2 +1,2 @@
-- include: php7-fpm.yml
+- include_tasks: php7-fpm.yml
   tags: ["php7-fpm"]
