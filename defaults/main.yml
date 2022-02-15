@@ -9,7 +9,6 @@ php7_memory_limit: 128M
 php7_max_input_vars: 1000
 php7_post_max_size: 40M
 php7_upload_max_filesize: 20M
-php7_version: 7.2
 php7_default_packages:
   - php{{ php7_version }}-fpm
   - php-apcu
