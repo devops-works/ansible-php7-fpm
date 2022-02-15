@@ -1,5 +1,3 @@
-php7_version: 7.2
-
 php7_default_packages:
   - php{{ php7_version }}-fpm
   - php-apcu
