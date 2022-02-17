@@ -8,6 +8,10 @@
     - vars
     - php7-fpm
 
-- include_tasks: php7-fpm.yml
+- include_tasks:
+    file: php7-fpm.yml
+    apply:
+      tags:
+        - php7-fpm
   tags:
-    - php7-fpm
+    - always
